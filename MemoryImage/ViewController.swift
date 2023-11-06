@@ -14,6 +14,10 @@ class ViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
 
-
+    @IBAction func btnTapped(_ sender: Any) {
+        let striryboard = self.storyboard?.instantiateViewController(withIdentifier: "gameViewController") as! gameViewController
+        self.navigationController?.pushViewController(striryboard, animated: true)
+    }
+    
 }
 
