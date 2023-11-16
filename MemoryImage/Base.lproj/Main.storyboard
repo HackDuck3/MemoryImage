@@ -5,6 +5,7 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22131"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="UIMenu" message="Requires Xcode 11 or later." minToolsVersion="11.0" requiredIntegratedClassName="UICommandDiff"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -16,7 +17,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="—Pngtree—minimalist style yellow mobile phone_1458625" translatesAutoresizingMaskIntoConstraints="NO" id="5So-mW-mpR">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="backgroundAppIMG" translatesAutoresizingMaskIntoConstraints="NO" id="5So-mW-mpR">
                                 <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
@@ -35,7 +36,7 @@
                                     <backgroundConfiguration key="background"/>
                                 </buttonConfiguration>
                                 <connections>
-                                    <action selector="btnTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="vLM-S9-s7t"/>
+                                    <segue destination="yYl-BK-lIL" kind="show" id="d1J-AY-Tjp"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -64,19 +65,25 @@
                                 <rect key="frame" x="19" y="158" width="354" height="354"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" restorationIdentifier="changeScreen" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="z1e-mJ-rA8">
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="z1e-mJ-rA8">
                                 <rect key="frame" x="147" y="642" width="99" height="35"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="gray" title="Continuar">
                                     <color key="baseForegroundColor" red="0.51773920750000002" green="0.4867442488" blue="0.35788265279999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </buttonConfiguration>
+                                <connections>
+                                    <segue destination="PAF-b7-cxw" kind="show" identifier="changeScreen" id="v8k-AB-Uxw"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="15t-sY-SFO"/>
                         <color key="backgroundColor" red="0.87305289509999995" green="0.82620852170000003" blue="0.60623682010000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </view>
                     <navigationItem key="navigationItem" id="RvD-cD-R9G"/>
+                    <connections>
+                        <outlet property="imgController" destination="Mzs-lR-y5o" id="DMJ-VD-RCp"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wza-dx-B9H" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -100,9 +107,65 @@
             </objects>
             <point key="canvasLocation" x="32.824427480916029" y="-28.169014084507044"/>
         </scene>
+        <!--Calculate View Controller-->
+        <scene sceneID="5bC-NY-Ukw">
+            <objects>
+                <viewController id="PAF-b7-cxw" customClass="CalculateViewController" customModule="MemoryImage" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="KMW-uv-pCK">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="16P-yG-3ek">
+                                <rect key="frame" x="38" y="139" width="140" height="140"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="S6Y-Ea-LQM">
+                                <rect key="frame" x="214" y="139" width="140" height="140"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Ze3-0z-jH0">
+                                <rect key="frame" x="214" y="360" width="140" height="140"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="FyG-RE-20U">
+                                <rect key="frame" x="38" y="360" width="140" height="140"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="NJl-9L-DEa">
+                                <rect key="frame" x="38" y="573" width="140" height="140"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" showsMenuAsPrimaryAction="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="e6b-Pv-rl6">
+                                <rect key="frame" x="62" y="287" width="92" height="45"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <menu key="menu" id="Xn7-Z1-Bgd">
+                                    <children>
+                                        <command title="Item 1" id="zdd-Ml-xow"/>
+                                        <command title="Item 2" id="1LQ-nX-rnK"/>
+                                    </children>
+                                </menu>
+                                <state key="normal" title="Elige el numero">
+                                    <color key="titleColor" red="0.51274565080000001" green="0.48204963629999997" blue="0.3544309008" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <color key="titleShadowColor" red="0.87305289509999995" green="0.82620852170000003" blue="0.60623682010000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <buttonConfiguration key="configuration" style="gray" title="Elige el numero">
+                                    <color key="baseForegroundColor" red="0.87305289509999995" green="0.82620852170000003" blue="0.60623682010000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <color key="baseBackgroundColor" red="0.51773920750000002" green="0.4867442488" blue="0.35788265279999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </buttonConfiguration>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="TTB-E9-Czf"/>
+                        <color key="backgroundColor" red="0.87305289509999995" green="0.82620852170000003" blue="0.60623682010000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="a2b-nr-Loj"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="SBt-uA-26z" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2977.8625954198474" y="-28.169014084507044"/>
+        </scene>
     </scenes>
     <resources>
-        <image name="—Pngtree—minimalist style yellow mobile phone_1458625" width="1080" height="2160"/>
+        <image name="backgroundAppIMG" width="1080" height="2160"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
