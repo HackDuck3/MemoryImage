@@ -103,7 +103,7 @@ class CalculateViewController: UIViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "showResult" {
             if let destinationVC = segue.destination as? ResultViewController,
-               let score = sender as? Int {
+               let score = sender as? Double {
                 destinationVC.score = score
             }
         }

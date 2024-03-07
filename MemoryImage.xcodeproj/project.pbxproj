@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4733C5E62B93131B00D0D3A2 /* Supabase in Frameworks */ = {isa = PBXBuildFile; productRef = 4733C5E52B93131B00D0D3A2 /* Supabase */; };
+		4733C5E82B954D9E00D0D3A2 /* RankingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4733C5E72B954D9E00D0D3A2 /* RankingViewController.swift */; };
 		4787FFA32ADEAB5200DE2497 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4787FFA22ADEAB5200DE2497 /* AppDelegate.swift */; };
 		4787FFA52ADEAB5200DE2497 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4787FFA42ADEAB5200DE2497 /* SceneDelegate.swift */; };
 		4787FFA72ADEAB5200DE2497 /* ResultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4787FFA62ADEAB5200DE2497 /* ResultViewController.swift */; };
@@ -14,10 +16,15 @@
 		4787FFAC2ADEAB5200DE2497 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4787FFAB2ADEAB5200DE2497 /* Assets.xcassets */; };
 		4787FFAF2ADEAB5200DE2497 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4787FFAD2ADEAB5200DE2497 /* LaunchScreen.storyboard */; };
 		479E9F392AE03AD900DFAE19 /* gameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 479E9F382AE03AD900DFAE19 /* gameViewController.swift */; };
+		47A624B12B93123A00E2E4C0 /* Functions in Frameworks */ = {isa = PBXBuildFile; productRef = 47A624B02B93123A00E2E4C0 /* Functions */; };
+		47A624B32B93123A00E2E4C0 /* PostgREST in Frameworks */ = {isa = PBXBuildFile; productRef = 47A624B22B93123A00E2E4C0 /* PostgREST */; };
+		47A624B52B93123A00E2E4C0 /* Realtime in Frameworks */ = {isa = PBXBuildFile; productRef = 47A624B42B93123A00E2E4C0 /* Realtime */; };
+		47A624B72B93123A00E2E4C0 /* Storage in Frameworks */ = {isa = PBXBuildFile; productRef = 47A624B62B93123A00E2E4C0 /* Storage */; };
 		47BBD1D22AF99081008C601A /* CalculateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47BBD1D12AF99081008C601A /* CalculateViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		4733C5E72B954D9E00D0D3A2 /* RankingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RankingViewController.swift; sourceTree = "<group>"; };
 		4787FF9F2ADEAB5200DE2497 /* MemoryImage.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MemoryImage.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4787FFA22ADEAB5200DE2497 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4787FFA42ADEAB5200DE2497 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -35,17 +42,30 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4733C5E62B93131B00D0D3A2 /* Supabase in Frameworks */,
+				47A624B72B93123A00E2E4C0 /* Storage in Frameworks */,
+				47A624B52B93123A00E2E4C0 /* Realtime in Frameworks */,
+				47A624B32B93123A00E2E4C0 /* PostgREST in Frameworks */,
+				47A624B12B93123A00E2E4C0 /* Functions in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4733C5E42B93131B00D0D3A2 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		4787FF962ADEAB5200DE2497 = {
 			isa = PBXGroup;
 			children = (
 				4787FFA12ADEAB5200DE2497 /* MemoryImage */,
 				4787FFA02ADEAB5200DE2497 /* Products */,
+				4733C5E42B93131B00D0D3A2 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -63,6 +83,7 @@
 				4787FFA22ADEAB5200DE2497 /* AppDelegate.swift */,
 				4787FFA42ADEAB5200DE2497 /* SceneDelegate.swift */,
 				479E9F382AE03AD900DFAE19 /* gameViewController.swift */,
+				4733C5E72B954D9E00D0D3A2 /* RankingViewController.swift */,
 				47BBD1D12AF99081008C601A /* CalculateViewController.swift */,
 				4787FFA62ADEAB5200DE2497 /* ResultViewController.swift */,
 				4787FFA82ADEAB5200DE2497 /* Main.storyboard */,
@@ -89,6 +110,13 @@
 			dependencies = (
 			);
 			name = MemoryImage;
+			packageProductDependencies = (
+				47A624B02B93123A00E2E4C0 /* Functions */,
+				47A624B22B93123A00E2E4C0 /* PostgREST */,
+				47A624B42B93123A00E2E4C0 /* Realtime */,
+				47A624B62B93123A00E2E4C0 /* Storage */,
+				4733C5E52B93131B00D0D3A2 /* Supabase */,
+			);
 			productName = MemoryImage;
 			productReference = 4787FF9F2ADEAB5200DE2497 /* MemoryImage.app */;
 			productType = "com.apple.product-type.application";
@@ -117,6 +145,9 @@
 				Base,
 			);
 			mainGroup = 4787FF962ADEAB5200DE2497;
+			packageReferences = (
+				47A624AF2B93123A00E2E4C0 /* XCRemoteSwiftPackageReference "supabase-swift" */,
+			);
 			productRefGroup = 4787FFA02ADEAB5200DE2497 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -149,6 +180,7 @@
 				4787FFA32ADEAB5200DE2497 /* AppDelegate.swift in Sources */,
 				47BBD1D22AF99081008C601A /* CalculateViewController.swift in Sources */,
 				4787FFA52ADEAB5200DE2497 /* SceneDelegate.swift in Sources */,
+				4733C5E82B954D9E00D0D3A2 /* RankingViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -308,6 +340,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -336,6 +369,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -371,6 +405,45 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		47A624AF2B93123A00E2E4C0 /* XCRemoteSwiftPackageReference "supabase-swift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/supabase-community/supabase-swift.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.3.1;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		4733C5E52B93131B00D0D3A2 /* Supabase */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 47A624AF2B93123A00E2E4C0 /* XCRemoteSwiftPackageReference "supabase-swift" */;
+			productName = Supabase;
+		};
+		47A624B02B93123A00E2E4C0 /* Functions */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 47A624AF2B93123A00E2E4C0 /* XCRemoteSwiftPackageReference "supabase-swift" */;
+			productName = Functions;
+		};
+		47A624B22B93123A00E2E4C0 /* PostgREST */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 47A624AF2B93123A00E2E4C0 /* XCRemoteSwiftPackageReference "supabase-swift" */;
+			productName = PostgREST;
+		};
+		47A624B42B93123A00E2E4C0 /* Realtime */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 47A624AF2B93123A00E2E4C0 /* XCRemoteSwiftPackageReference "supabase-swift" */;
+			productName = Realtime;
+		};
+		47A624B62B93123A00E2E4C0 /* Storage */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 47A624AF2B93123A00E2E4C0 /* XCRemoteSwiftPackageReference "supabase-swift" */;
+			productName = Storage;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 4787FF972ADEAB5200DE2497 /* Project object */;
 }
